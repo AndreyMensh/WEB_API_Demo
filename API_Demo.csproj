@@ -143,12 +143,6 @@
     <Content Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.csproj.FileListAbsolute.txt" />
     <Content Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.dll" />
     <Content Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.pdb" />
-    <Content Include="WEBAPI\Properties\PublishProfiles\CustomProfile.pubxml.user" />
-    <Content Include="WEBAPI\Properties\PublishProfiles\CustomProfile1.pubxml.user" />
-    <Content Include="WEBAPI\Properties\PublishProfiles\FolderProfile.pubxml.user" />
-    <Content Include="WEBAPI\Properties\PublishProfiles\zond-europe - Web Deploy.pubxml.user" />
-    <Content Include="WEBAPI\Properties\PublishProfiles\zond-server - Web Deploy.pubxml.user" />
-    <Content Include="WEBAPI\Properties\PublishProfiles\Zond20190604032006 - Web Deploy.pubxml.user" />
     <Content Include="WEBAPI\requests-log.txt" />
     <Content Include="WEBAPI\WEBAPI.csproj" />
     <Content Include="WEBAPI\WEBAPI.csproj.user" />
@@ -221,12 +215,6 @@
     <None Include="WEBAPI\obj\Zond.csproj.nuget.g.props" />
     <None Include="WEBAPI\obj\Zond.csproj.nuget.g.targets" />
     <None Include="WEBAPI\Properties\launchSettings.json" />
-    <None Include="WEBAPI\Properties\PublishProfiles\CustomProfile.pubxml" />
-    <None Include="WEBAPI\Properties\PublishProfiles\CustomProfile1.pubxml" />
-    <None Include="WEBAPI\Properties\PublishProfiles\FolderProfile.pubxml" />
-    <None Include="WEBAPI\Properties\PublishProfiles\zond-europe - Web Deploy.pubxml" />
-    <None Include="WEBAPI\Properties\PublishProfiles\zond-server - Web Deploy.pubxml" />
-    <None Include="WEBAPI\Properties\PublishProfiles\Zond20190604032006 - Web Deploy.pubxml" />
     <None Include="WEBAPI\web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -545,6 +533,7 @@
     <Folder Include="Helpers\Enums\" />
     <Folder Include="WEBAPI\logs\" />
     <Folder Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\TestMsDeployConnection\" />
+    <Folder Include="WEBAPI\Properties\PublishProfiles\" />
     <Folder Include="WEBAPI\wwwroot\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
