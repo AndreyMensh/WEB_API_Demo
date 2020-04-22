@@ -1,0 +1,543 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{0944345D-6510-4221-850B-287B3B907F9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>API_DEMO</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="Helpers\bin\Debug\netcoreapp2.1\Helpers.dll" />
+    <Content Include="Helpers\bin\Debug\netcoreapp2.1\Helpers.pdb" />
+    <Content Include="Helpers\bin\Release\netcoreapp2.1\Helpers.dll" />
+    <Content Include="Helpers\bin\Release\netcoreapp2.1\Helpers.pdb" />
+    <Content Include="Helpers\Helpers.csproj" />
+    <Content Include="Helpers\obj\Debug\netcoreapp2.1\Helpers.csproj.FileListAbsolute.txt" />
+    <Content Include="Helpers\obj\Debug\netcoreapp2.1\Helpers.dll" />
+    <Content Include="Helpers\obj\Debug\netcoreapp2.1\Helpers.pdb" />
+    <Content Include="Helpers\obj\Release\netcoreapp2.1\Helpers.csproj.FileListAbsolute.txt" />
+    <Content Include="Helpers\obj\Release\netcoreapp2.1\Helpers.dll" />
+    <Content Include="Helpers\obj\Release\netcoreapp2.1\Helpers.pdb" />
+    <Content Include="WEBAPI\bin\Debug\netcoreapp2.1\Helpers.dll" />
+    <Content Include="WEBAPI\bin\Debug\netcoreapp2.1\Helpers.pdb" />
+    <Content Include="WEBAPI\bin\Debug\netcoreapp2.1\Zond.dll" />
+    <Content Include="WEBAPI\bin\Debug\netcoreapp2.1\Zond.pdb" />
+    <Content Include="WEBAPI\bin\Release\netcoreapp2.1\Helpers.dll" />
+    <Content Include="WEBAPI\bin\Release\netcoreapp2.1\Helpers.pdb" />
+    <Content Include="WEBAPI\bin\Release\netcoreapp2.1\Zond.dll" />
+    <Content Include="WEBAPI\bin\Release\netcoreapp2.1\Zond.pdb" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Autofac.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\AutoMapper.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\AutoMapper.Extensions.Microsoft.DependencyInjection.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\CryptoHelper.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\dotnet-aspnet-codegenerator-design.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Helpers.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Helpers.pdb" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.CodeAnalysis.CSharp.Workspaces.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.CodeAnalysis.Workspaces.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.OpenApi.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\NuGet.Frameworks.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Swashbuckle.AspNetCore.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\System.Composition.AttributedModel.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\System.Composition.Convention.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\System.Composition.Hosting.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\System.Composition.Runtime.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\System.Composition.TypedParts.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Twilio.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Zond.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Zond.pdb" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.csproj.FileListAbsolute.txt" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.dll" />
+    <Content Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.pdb" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Autofac.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\AutoMapper.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\AutoMapper.Extensions.Microsoft.DependencyInjection.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\CryptoHelper.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\dotnet-aspnet-codegenerator-design.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Helpers.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Helpers.pdb" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.CodeAnalysis.CSharp.Workspaces.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.CodeAnalysis.Workspaces.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.IdentityModel.JsonWebTokens.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.IdentityModel.Logging.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.IdentityModel.Tokens.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.IO.RecyclableMemoryStream.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.OpenApi.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\NuGet.Frameworks.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Serilog.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Serilog.Extensions.Logging.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Swashbuckle.AspNetCore.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\System.Composition.AttributedModel.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\System.Composition.Convention.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\System.Composition.Hosting.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\System.Composition.Runtime.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\System.Composition.TypedParts.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\System.IdentityModel.Tokens.Jwt.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Twilio.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Zond.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Zond.pdb" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Zond.Parameters.xml" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Zond.SourceManifest.xml" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.csproj.FileListAbsolute.txt" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.dll" />
+    <Content Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.pdb" />
+    <Content Include="WEBAPI\requests-log.txt" />
+    <Content Include="WEBAPI\WEBAPI.csproj" />
+    <Content Include="WEBAPI\WEBAPI.csproj.user" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".vscode\settings.json" />
+    <None Include=".vs\API_Demo\v15\.suo" />
+    <None Include=".vs\API_Demo\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\API_Demo\v15\Server\sqlite3\storage.ide" />
+    <None Include=".vs\API_Demo\v15\Server\sqlite3\storage.ide-shm" />
+    <None Include=".vs\API_Demo\v15\Server\sqlite3\storage.ide-wal" />
+    <None Include=".vs\config\applicationhost.config" />
+    <None Include=".vs\Zond\DesignTimeBuild\.dtbcache" />
+    <None Include=".vs\Zond\v15\.suo" />
+    <None Include=".vs\Zond\v15\Server\sqlite3\db.lock" />
+    <None Include=".vs\Zond\v15\Server\sqlite3\storage.ide" />
+    <None Include="Helpers\bin\Debug\netcoreapp2.1\Helpers.deps.json" />
+    <None Include="Helpers\bin\Release\netcoreapp2.1\Helpers.deps.json" />
+    <None Include="Helpers\obj\Debug\netcoreapp2.1\Helpers.AssemblyInfoInputs.cache" />
+    <None Include="Helpers\obj\Debug\netcoreapp2.1\Helpers.assets.cache" />
+    <None Include="Helpers\obj\Debug\netcoreapp2.1\Helpers.csproj.CoreCompileInputs.cache" />
+    <None Include="Helpers\obj\Debug\netcoreapp2.1\Helpers.csprojAssemblyReference.cache" />
+    <None Include="Helpers\obj\Helpers.csproj.nuget.cache" />
+    <None Include="Helpers\obj\Helpers.csproj.nuget.g.props" />
+    <None Include="Helpers\obj\Helpers.csproj.nuget.g.targets" />
+    <None Include="Helpers\obj\project.assets.json" />
+    <None Include="Helpers\obj\Release\netcoreapp2.1\Helpers.AssemblyInfoInputs.cache" />
+    <None Include="Helpers\obj\Release\netcoreapp2.1\Helpers.assets.cache" />
+    <None Include="Helpers\obj\Release\netcoreapp2.1\Helpers.csproj.CoreCompileInputs.cache" />
+    <None Include="Helpers\obj\Release\netcoreapp2.1\Helpers.csprojAssemblyReference.cache" />
+    <None Include="WEBAPI\.vscode\settings.json" />
+    <None Include="WEBAPI\appsettings.Development.json" />
+    <None Include="WEBAPI\appsettings.json" />
+    <None Include="WEBAPI\appsettings.Production.json" />
+    <None Include="WEBAPI\bin\Debug\netcoreapp2.1\Zond.deps.json" />
+    <None Include="WEBAPI\bin\Debug\netcoreapp2.1\Zond.runtimeconfig.dev.json" />
+    <None Include="WEBAPI\bin\Debug\netcoreapp2.1\Zond.runtimeconfig.json" />
+    <None Include="WEBAPI\bin\Release\netcoreapp2.1\Zond.deps.json" />
+    <None Include="WEBAPI\bin\Release\netcoreapp2.1\Zond.runtimeconfig.dev.json" />
+    <None Include="WEBAPI\bin\Release\netcoreapp2.1\Zond.runtimeconfig.json" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\appsettings.Development.json" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\appsettings.json" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\appsettings.Production.json" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\web.config" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Zond.deps.json" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\Out\Zond.runtimeconfig.json" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.AssemblyInfoInputs.cache" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.assets.cache" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.csproj.CopyComplete" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.csproj.CoreCompileInputs.cache" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.csprojAssemblyReference.cache" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.RazorAssemblyInfo.cache" />
+    <None Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.RazorTargetAssemblyInfo.cache" />
+    <None Include="WEBAPI\obj\project.assets.json" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\appsettings.Development.json" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\appsettings.json" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\appsettings.Production.json" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\web.config" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Zond.deps.json" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\PubTmp\Out\Zond.runtimeconfig.json" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.AssemblyInfoInputs.cache" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.assets.cache" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.csproj.CopyComplete" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.csproj.CoreCompileInputs.cache" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.csprojAssemblyReference.cache" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.RazorAssemblyInfo.cache" />
+    <None Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.RazorTargetAssemblyInfo.cache" />
+    <None Include="WEBAPI\obj\Zond.csproj.EntityFrameworkCore.targets" />
+    <None Include="WEBAPI\obj\Zond.csproj.nuget.cache" />
+    <None Include="WEBAPI\obj\Zond.csproj.nuget.g.props" />
+    <None Include="WEBAPI\obj\Zond.csproj.nuget.g.targets" />
+    <None Include="WEBAPI\Properties\launchSettings.json" />
+    <None Include="WEBAPI\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Helpers\ActionFilters\ModelValidationAttribute.cs" />
+    <Compile Include="Helpers\Cryptography\AesOperation.cs" />
+    <Compile Include="Helpers\Cryptography\Cipher\StringCipher.cs" />
+    <Compile Include="Helpers\Cryptography\PasswordGenerator.cs" />
+    <Compile Include="Helpers\Cryptography\PasswordHasher.cs" />
+    <Compile Include="Helpers\Exceptions\RoleExceptions.cs" />
+    <Compile Include="Helpers\Exceptions\TokenException.cs" />
+    <Compile Include="Helpers\Exceptions\UserException.cs" />
+    <Compile Include="Helpers\Models\ErrorDetails.cs" />
+    <Compile Include="Helpers\obj\Debug\netcoreapp2.1\Helpers.AssemblyInfo.cs" />
+    <Compile Include="Helpers\obj\Debug\netcoreapp2.1\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Helpers\obj\Debug\netcoreapp2.1\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Helpers\obj\Debug\netcoreapp2.1\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Helpers\obj\Release\netcoreapp2.1\Helpers.AssemblyInfo.cs" />
+    <Compile Include="Helpers\obj\Release\netcoreapp2.1\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Helpers\obj\Release\netcoreapp2.1\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Helpers\obj\Release\netcoreapp2.1\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Helpers\SearchModels\OrderedSearchModel.cs" />
+    <Compile Include="Helpers\SearchModels\SearchModel.cs" />
+    <Compile Include="Helpers\SearchModels\SearchResult.cs" />
+    <Compile Include="Helpers\SearchModels\SearchResultModel.cs" />
+    <Compile Include="Helpers\Services\Contracts\IEmailService.cs" />
+    <Compile Include="Helpers\Services\Contracts\IHelperService.cs" />
+    <Compile Include="Helpers\Services\Implementations\EmailService.cs" />
+    <Compile Include="Helpers\Services\Implementations\HelperService.cs" />
+    <Compile Include="WEBAPI\Constants\Constants.cs" />
+    <Compile Include="WEBAPI\Constants\RolesConstant.cs" />
+    <Compile Include="WEBAPI\Controllers\ActsController.cs" />
+    <Compile Include="WEBAPI\Controllers\ApprovesController.cs" />
+    <Compile Include="WEBAPI\Controllers\AuthController.cs" />
+    <Compile Include="WEBAPI\Controllers\BreaksController.cs" />
+    <Compile Include="WEBAPI\Controllers\CompaniesController.cs" />
+    <Compile Include="WEBAPI\Controllers\CompaniesMangerController.cs" />
+    <Compile Include="WEBAPI\Controllers\CompanySettingsController.cs" />
+    <Compile Include="WEBAPI\Controllers\ErrorsController.cs" />
+    <Compile Include="WEBAPI\Controllers\JobsController.cs" />
+    <Compile Include="WEBAPI\Controllers\ProblemsController.cs" />
+    <Compile Include="WEBAPI\Controllers\TableSettingsController.cs" />
+    <Compile Include="WEBAPI\Controllers\UsersController.cs" />
+    <Compile Include="WEBAPI\Controllers\UserSettingsController.cs" />
+    <Compile Include="WEBAPI\Controllers\ValuesController.cs" />
+    <Compile Include="WEBAPI\Enums\GroupingTypeEnum.cs" />
+    <Compile Include="WEBAPI\Enums\JobStatusEnum.cs" />
+    <Compile Include="WEBAPI\Enums\ManagerType.cs" />
+    <Compile Include="WEBAPI\Enums\RoleEnum.cs" />
+    <Compile Include="WEBAPI\Enums\UserStatusEnum.cs" />
+    <Compile Include="WEBAPI\Extensions\ApplicationDatabaseContextExtension.cs" />
+    <Compile Include="WEBAPI\Extensions\BlockExtension.cs" />
+    <Compile Include="WEBAPI\Extensions\ExceptionHandler.cs" />
+    <Compile Include="WEBAPI\Logger\FileLogger.cs" />
+    <Compile Include="WEBAPI\Logger\FileLoggerExtensions.cs" />
+    <Compile Include="WEBAPI\Logger\FileLoggerProvider.cs" />
+    <Compile Include="WEBAPI\Mapper\DurationMapper.cs" />
+    <Compile Include="WEBAPI\Mapper\MappingProfile.cs" />
+    <Compile Include="WEBAPI\Middlewares\IsBlockedMiddleware.cs" />
+    <Compile Include="WEBAPI\Middlewares\RequestResponseLoggingMiddleware.cs" />
+    <Compile Include="WEBAPI\Middlewares\RequestResponseLoggingMiddlewareR.cs" />
+    <Compile Include="WEBAPI\Migrations\20190513074631_Initial.cs" />
+    <Compile Include="WEBAPI\Migrations\20190513074631_Initial.Designer.cs">
+      <DependentUpon>20190513074631_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190513084103_InitialUpdate.cs" />
+    <Compile Include="WEBAPI\Migrations\20190513084103_InitialUpdate.Designer.cs">
+      <DependentUpon>20190513084103_InitialUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190513092615_CompaniesAdd.cs" />
+    <Compile Include="WEBAPI\Migrations\20190513092615_CompaniesAdd.Designer.cs">
+      <DependentUpon>20190513092615_CompaniesAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190513100004_Company contact info.cs" />
+    <Compile Include="WEBAPI\Migrations\20190513100004_Company contact info.Designer.cs">
+      <DependentUpon>20190513100004_Company contact info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190513104524_CompanySettingsIntitial.cs" />
+    <Compile Include="WEBAPI\Migrations\20190513104524_CompanySettingsIntitial.Designer.cs">
+      <DependentUpon>20190513104524_CompanySettingsIntitial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190514130021_Implement user settings.cs" />
+    <Compile Include="WEBAPI\Migrations\20190514130021_Implement user settings.Designer.cs">
+      <DependentUpon>20190514130021_Implement user settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190514152907_RenameuserSettings.cs" />
+    <Compile Include="WEBAPI\Migrations\20190514152907_RenameuserSettings.Designer.cs">
+      <DependentUpon>20190514152907_RenameuserSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190519160855_add user status enum.cs" />
+    <Compile Include="WEBAPI\Migrations\20190519160855_add user status enum.Designer.cs">
+      <DependentUpon>20190519160855_add user status enum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190520202033_CanAdministratorSeeOnlyOnlineWorkers.cs" />
+    <Compile Include="WEBAPI\Migrations\20190520202033_CanAdministratorSeeOnlyOnlineWorkers.Designer.cs">
+      <DependentUpon>20190520202033_CanAdministratorSeeOnlyOnlineWorkers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190520213329_user last update date add.cs" />
+    <Compile Include="WEBAPI\Migrations\20190520213329_user last update date add.Designer.cs">
+      <DependentUpon>20190520213329_user last update date add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190521132852_Job and acts.cs" />
+    <Compile Include="WEBAPI\Migrations\20190521132852_Job and acts.Designer.cs">
+      <DependentUpon>20190521132852_Job and acts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190526225140_Table settings.cs" />
+    <Compile Include="WEBAPI\Migrations\20190526225140_Table settings.Designer.cs">
+      <DependentUpon>20190526225140_Table settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190527115725_nullable locations.cs" />
+    <Compile Include="WEBAPI\Migrations\20190527115725_nullable locations.Designer.cs">
+      <DependentUpon>20190527115725_nullable locations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190527210303_job updates.cs" />
+    <Compile Include="WEBAPI\Migrations\20190527210303_job updates.Designer.cs">
+      <DependentUpon>20190527210303_job updates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190528120826_break migration.cs" />
+    <Compile Include="WEBAPI\Migrations\20190528120826_break migration.Designer.cs">
+      <DependentUpon>20190528120826_break migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190528122449_break enabled.cs" />
+    <Compile Include="WEBAPI\Migrations\20190528122449_break enabled.Designer.cs">
+      <DependentUpon>20190528122449_break enabled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190528131317_nullable break.cs" />
+    <Compile Include="WEBAPI\Migrations\20190528131317_nullable break.Designer.cs">
+      <DependentUpon>20190528131317_nullable break.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190528152040_approve to job.cs" />
+    <Compile Include="WEBAPI\Migrations\20190528152040_approve to job.Designer.cs">
+      <DependentUpon>20190528152040_approve to job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190604084234_manual changed.cs" />
+    <Compile Include="WEBAPI\Migrations\20190604084234_manual changed.Designer.cs">
+      <DependentUpon>20190604084234_manual changed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190608152802_Contact email.cs" />
+    <Compile Include="WEBAPI\Migrations\20190608152802_Contact email.Designer.cs">
+      <DependentUpon>20190608152802_Contact email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190609144022_ErrorMigra.cs" />
+    <Compile Include="WEBAPI\Migrations\20190609144022_ErrorMigra.Designer.cs">
+      <DependentUpon>20190609144022_ErrorMigra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190615134050_check photo.cs" />
+    <Compile Include="WEBAPI\Migrations\20190615134050_check photo.Designer.cs">
+      <DependentUpon>20190615134050_check photo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190617094519_sum.cs" />
+    <Compile Include="WEBAPI\Migrations\20190617094519_sum.Designer.cs">
+      <DependentUpon>20190617094519_sum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190711223405_from to work.cs" />
+    <Compile Include="WEBAPI\Migrations\20190711223405_from to work.Designer.cs">
+      <DependentUpon>20190711223405_from to work.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190711231741_job contact phone.cs" />
+    <Compile Include="WEBAPI\Migrations\20190711231741_job contact phone.Designer.cs">
+      <DependentUpon>20190711231741_job contact phone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190711232042_user settings.cs" />
+    <Compile Include="WEBAPI\Migrations\20190711232042_user settings.Designer.cs">
+      <DependentUpon>20190711232042_user settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190711233302_table settings uppdate.cs" />
+    <Compile Include="WEBAPI\Migrations\20190711233302_table settings uppdate.Designer.cs">
+      <DependentUpon>20190711233302_table settings uppdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190712195818_fromtocansee.cs" />
+    <Compile Include="WEBAPI\Migrations\20190712195818_fromtocansee.Designer.cs">
+      <DependentUpon>20190712195818_fromtocansee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190712212829_allowedusers.cs" />
+    <Compile Include="WEBAPI\Migrations\20190712212829_allowedusers.Designer.cs">
+      <DependentUpon>20190712212829_allowedusers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190727093638_trustedips.cs" />
+    <Compile Include="WEBAPI\Migrations\20190727093638_trustedips.Designer.cs">
+      <DependentUpon>20190727093638_trustedips.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190728094519_password failed count.cs" />
+    <Compile Include="WEBAPI\Migrations\20190728094519_password failed count.Designer.cs">
+      <DependentUpon>20190728094519_password failed count.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190823162234_upd usr sett.cs" />
+    <Compile Include="WEBAPI\Migrations\20190823162234_upd usr sett.Designer.cs">
+      <DependentUpon>20190823162234_upd usr sett.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190825183301_answer.cs" />
+    <Compile Include="WEBAPI\Migrations\20190825183301_answer.Designer.cs">
+      <DependentUpon>20190825183301_answer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190825184414_manager type.cs" />
+    <Compile Include="WEBAPI\Migrations\20190825184414_manager type.Designer.cs">
+      <DependentUpon>20190825184414_manager type.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190826171652_managgetr type new.cs" />
+    <Compile Include="WEBAPI\Migrations\20190826171652_managgetr type new.Designer.cs">
+      <DependentUpon>20190826171652_managgetr type new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20190929120611_ManagerTypeNewAttemt.cs" />
+    <Compile Include="WEBAPI\Migrations\20190929120611_ManagerTypeNewAttemt.Designer.cs">
+      <DependentUpon>20190929120611_ManagerTypeNewAttemt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20191027130353_Company Notes.cs" />
+    <Compile Include="WEBAPI\Migrations\20191027130353_Company Notes.Designer.cs">
+      <DependentUpon>20191027130353_Company Notes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\20191027184409_pwd cipher.cs" />
+    <Compile Include="WEBAPI\Migrations\20191027184409_pwd cipher.Designer.cs">
+      <DependentUpon>20191027184409_pwd cipher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WEBAPI\Migrations\ApplicationDatabaseContextModelSnapshot.cs" />
+    <Compile Include="WEBAPI\Model\ApplicationDatabaseContext.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\Act.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\AllowedUser.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\Break.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\Company.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\CompanySettings.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\Error.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\Job.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\Location.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\RefreshToken.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\Role.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\TableSettings.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\TrustedIpAddress.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\User.cs" />
+    <Compile Include="WEBAPI\Model\DatabaseModels\UserSettings.cs" />
+    <Compile Include="WEBAPI\Model\Seeds\Roles.cs" />
+    <Compile Include="WEBAPI\Model\Seeds\SuperAdmin.cs" />
+    <Compile Include="WEBAPI\obj\Debug\netcoreapp2.1\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="WEBAPI\obj\Debug\netcoreapp2.1\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="WEBAPI\obj\Debug\netcoreapp2.1\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="WEBAPI\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs" />
+    <Compile Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.AssemblyInfo.cs" />
+    <Compile Include="WEBAPI\obj\Debug\netcoreapp2.1\Zond.RazorAssemblyInfo.cs" />
+    <Compile Include="WEBAPI\obj\Release\netcoreapp2.1\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="WEBAPI\obj\Release\netcoreapp2.1\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="WEBAPI\obj\Release\netcoreapp2.1\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="WEBAPI\obj\Release\netcoreapp2.1\UserSecretsAssemblyInfo.cs" />
+    <Compile Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.AssemblyInfo.cs" />
+    <Compile Include="WEBAPI\obj\Release\netcoreapp2.1\Zond.RazorAssemblyInfo.cs" />
+    <Compile Include="WEBAPI\Program.cs" />
+    <Compile Include="WEBAPI\SearchModels\JobSearchModel.cs" />
+    <Compile Include="WEBAPI\SearchModels\UserSearchModel.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\IActsService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\IAuthService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\IBreakService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\ICompaniesService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\ICompanyManagerService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\ICompanySettingsService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\IJobService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\ILocationService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\IRolesService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\ISmsService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\ITableSettingsService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\IUserSettingsService.cs" />
+    <Compile Include="WEBAPI\Services\Contracts\IUsersService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\ActsService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\AuthService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\BreakService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\CompaniesService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\CompanyManagerService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\CompanySettingsService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\JobService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\LocationService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\RolesService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\SmsService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\TableSettingsService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\UserSettingsService.cs" />
+    <Compile Include="WEBAPI\Services\Implementations\UsersService.cs" />
+    <Compile Include="WEBAPI\Startup.cs" />
+    <Compile Include="WEBAPI\ViewModels\Act\ActViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Act\CreateActViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Act\UpdateActViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\AllowedUser\AllowedUserViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\AllowedUser\UpdateAllowedUserViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Auth\ConfirmIpViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Auth\GetTokenViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Auth\RefreshTokenViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Auth\RestorePasswordViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Auth\TokenViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Break\BreakViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Break\CreateBreakViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\CompanySettings\CompanySettingsViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\CompanySettings\UpdateCompanySettingsViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Company\CompanyContactInfoViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Company\CompanyViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Company\CreateCompanyViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Company\UpdateCompanyContactInfoViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Company\UpdateCompanyViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Job\CreateJobCrmViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Job\CreateJobViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Job\GroupableJob.cs" />
+    <Compile Include="WEBAPI\ViewModels\Job\JobViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Job\UpdateJobViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Location\CreateLocationViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Location\LocationViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Location\UpdateLocationViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Problem\AddProblemViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Role\RoleViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\Sms\SendSmsViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\TableSettings\TableSettingsViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\TableSettings\UpdateTableSettingsViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\UserSettings\UpdateAdministratorUserSettingsViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\UserSettings\UpdateUserSettingsViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\UserSettings\UserSettingsViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\User\CreatedUserViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\User\CreateUserViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\User\UpdateUserViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\User\UserInfoViewModel.cs" />
+    <Compile Include="WEBAPI\ViewModels\User\UserViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\APIdemo\v15\Server\sqlite3\" />
+    <Folder Include="Helpers\Enums\" />
+    <Folder Include="WEBAPI\logs\" />
+    <Folder Include="WEBAPI\obj\Debug\netcoreapp2.1\PubTmp\TestMsDeployConnection\" />
+    <Folder Include="WEBAPI\Properties\PublishProfiles\" />
+    <Folder Include="WEBAPI\wwwroot\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
